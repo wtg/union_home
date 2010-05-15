@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100515172312) do
+ActiveRecord::Schema.define(:version => 20100515173025) do
 
   create_table "budgets", :force => true do |t|
     t.integer  "ext_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20100515172312) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "images", :force => true do |t|
@@ -67,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20100515172312) do
     t.string   "tags"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "page_sidebars", :force => true do |t|
@@ -85,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20100515172312) do
     t.string   "tags"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "programs", :force => true do |t|
