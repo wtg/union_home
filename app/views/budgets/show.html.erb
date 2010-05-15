@@ -1,0 +1,33 @@
+<p>
+  <b>Ext:</b>
+  <%=h @budget.ext_id %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%=h @budget.year %>
+</p>
+
+<p>
+  <b>Club:</b>
+  <%=h @budget.club_id %>
+</p>
+
+<p>
+  <b>Expense in cents:</b>
+  <%=h @budget.expense_in_cents %>
+</p>
+
+<p>
+  <b>Income in cents:</b>
+  <%=h @budget.income_in_cents %>
+</p>
+
+<p>
+  <b>Subsidy in cents:</b>
+  <%=h @budget.subsidy_in_cents %>
+</p>
+
+
+<%= link_to 'Edit', edit_budget_path(@budget) %> |
+<%= link_to 'Back', budgets_path %>

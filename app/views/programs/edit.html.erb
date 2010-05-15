@@ -1,0 +1,32 @@
+<h1>Editing program</h1>
+
+<% form_for(@program) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :expense_in_cents %><br />
+    <%= f.text_field :expense_in_cents %>
+  </p>
+  <p>
+    <%= f.label :income_in_cents %><br />
+    <%= f.text_field :income_in_cents %>
+  </p>
+  <p>
+    <%= f.label :subsidy_in_cents %><br />
+    <%= f.text_field :subsidy_in_cents %>
+  </p>
+  <p>
+    <%= f.label :budget_id %><br />
+    <%= f.text_field :budget_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @program %> |
+<%= link_to 'Back', programs_path %>

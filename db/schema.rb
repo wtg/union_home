@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100515040855) do
+ActiveRecord::Schema.define(:version => 20100515172312) do
+
+  create_table "budgets", :force => true do |t|
+    t.integer  "ext_id"
+    t.integer  "year"
+    t.integer  "club_id"
+    t.integer  "expense_in_cents"
+    t.integer  "income_in_cents"
+    t.integer  "subsidy_in_cents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -72,6 +83,16 @@ ActiveRecord::Schema.define(:version => 20100515040855) do
     t.integer  "category_id"
     t.text     "description"
     t.string   "tags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "programs", :force => true do |t|
+    t.string   "name"
+    t.integer  "expense_in_cents"
+    t.integer  "income_in_cents"
+    t.integer  "subsidy_in_cents"
+    t.integer  "budget_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

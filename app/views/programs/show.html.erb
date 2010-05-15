@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @program.name %>
+</p>
+
+<p>
+  <b>Expense in cents:</b>
+  <%=h @program.expense_in_cents %>
+</p>
+
+<p>
+  <b>Income in cents:</b>
+  <%=h @program.income_in_cents %>
+</p>
+
+<p>
+  <b>Subsidy in cents:</b>
+  <%=h @program.subsidy_in_cents %>
+</p>
+
+<p>
+  <b>Budget:</b>
+  <%=h @program.budget_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>

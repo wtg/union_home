@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :programs
+
+  map.resources :budgets
+
   map.resources :page_sidebars
 
   map.resources :landing_sidebars
