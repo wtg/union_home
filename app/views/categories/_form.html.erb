@@ -1,0 +1,12 @@
+<% form_for(category, :html => { :class => 'cmxform', :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+	<fieldset>
+		<ol>
+			<li><%= f.label :title %> <%= f.text_field :title %></li>
+			<li><%= f.label :is_hidden %> <%= f.check_box :is_hidden %></li>
+			<li><%= f.label :cardinality %> <%= f.text_field :cardinality %></li>
+			<li><%= f.label :landing_id %> <%= f.text_field :landing_id %></li>
+		</ol>
+	</fieldset>
+  <%= f.submit button_text %>
+<% end %>

@@ -1,0 +1,11 @@
+<% form_for(landing, :html => { :class => 'cmxform', :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+	<fieldset>
+		<ol>
+			<li><%= f.label :title %> <%= f.text_field :title %></li>
+			<li><%= f.label :opening %> <%= f.text_area :opening %></li>
+			<li><%= f.label :tags %> <%= f.text_field :tags %></li>
+		</ol>
+	</fieldset>
+  <%= f.submit button_text %>
+<% end %>

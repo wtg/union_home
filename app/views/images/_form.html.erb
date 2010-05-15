@@ -1,0 +1,11 @@
+<% form_for(image, :html => { :class => 'cmxform', :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+	<fieldset>
+		<ol>
+			<li><%= f.label :title %> <%= f.text_field :title %></li>
+			<li><%= f.label :caption %> <%= f.text_field :caption %></li>
+			<li><%= f.label :file, "Upload File" %> <%= f.file_field :file %></li>
+		</ol>
+	</fieldset>
+  <%= f.submit button_text %>
+<% end %>

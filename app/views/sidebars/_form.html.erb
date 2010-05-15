@@ -1,0 +1,10 @@
+<% form_for(sidebar, :html => { :class => 'cmxform', :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+	<fieldset>
+		<ol>
+			<li><%= f.label :title %> <%= f.text_field :title %></li>
+			<li><%= f.label :content %> <%= f.text_area :content %></li>
+		</ol>
+	</fieldset>
+  <%= f.submit button_text %>
+<% end %>

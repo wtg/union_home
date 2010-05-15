@@ -1,0 +1,12 @@
+<% form_for(club, :html => { :class => 'cmxform', :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+	<fieldset>
+		<ol>
+			<li><%= f.label :name %> <%= f.text_field :name %></li>
+			<li><%= f.label :ext_id %> <%= f.text_field :ext_id %></li>
+			<li><%= f.label :category_id %> <%= f.text_field :category_id %></li>
+			<li><%= f.label :description %> <%= f.text_area :description %></li>
+		</ol>
+	</fieldset>
+  <%= f.submit button_text %>
+<% end %>
