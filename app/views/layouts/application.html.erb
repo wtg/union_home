@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<meta name="keywords" content="rpi union, rensselaer union, rpi, union, rpi student union, hsbc, troy, troy new york, new york, ny, rpi executive board, extracurricular, clubs, student, student life, campus life, rensselaer, union rpi, campus, clubhouse pub, pub, activity fee, activities, bank, intramurals, athletics, funding, " /> 
+	<meta name="description" content="The Rensselaer Union has been the center of student life at Rensselaer Polytechnic Institute (RPI) since 1890.  Located in Troy, New York, it is one of the few student-managed unions in the United States." /> 
+	<title><%= controller.controller_name.titleize %> - Rensselaer Union</title> 
+
+	<%= stylesheet_link_tag "comments" %>
+	<%= stylesheet_link_tag "new-main.css" %>
+	<%= stylesheet_link_tag "cake.forms" %>
+	<%= stylesheet_link_tag "jquery-ui-sortable" %>
+	<%= stylesheet_link_tag "sortable" %>
+	<!--[if IE]>
+  		<%= stylesheet_link_tag "ie" %> 
+		<style type="text/css"> 
+			div.tip { background-color:#ddd; } 
+		</style> 
+	<![endif]--> 
+ 
+	<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script> 
+
+</head> 
+<body> 
+   <div id="stripe1"> 
+      <div id="str1"> 
+         <div class="innerdiv"> 
+            <div id="header"> 
+               <div style="float:left; width:123px; margin-top:15px;"><a href="/"><%= image_tag("new/unionlogo.png", :alt => "Rensselaer Union" ) %></a></div> 
+               <div style="float:left;"> 
+                  <ul id="topmenu"> 
+                     <li><a href="#">Clubs</a></li> 
+                     <li><a href="#">Finances</a></li> 
+                     <li><a href="#">About the Union</a></li> 
+                     <li><a href="#">Campus and Beyond</a></li> 
+                  </ul> 
+                  <div style="clear:both;"></div> 
+               </div> 
+               <div style="float:right; text-align:right;"> 
+           			<div id="loginpanel" class="login-only"> 
+               			<a href="/users/login">Login</a>
+             		</div> 
+               </div> 
+               <div style="clear:both;"></div> 
+            </div> 
+         </div> 
+      </div> 
+   </div> 
+   <div style="clear:both;"></div> 
+ 
+   <div id="stripe2"> 
+      <div id="str2"> 
+         <div class="innerdiv"> 
+            <div id="fp-expose" style="height:324px;"> 
+            	<div id="fp-left" style="position:relative;"> 
+                  <a href="#" id="play" class="button" style="display:none"><%= image_tag("play.png", :alt => "" ) %></a> 
+                  <a href="#" id="pause" class="button" style="display:none"><%= image_tag("pause.png", :alt => "" ) %></a> 
+                  <%= image_tag("new/unionbig_semi.jpg", :alt => "", :class => 'fp-exposed') %>
+				</div> 
+               <div id="fp-right" style="height:324px;"> 
+                  <div id="fp-right-padding"> 
+                     <div class="fc-padding"> 
+                        <div class="fc-top"><div>&nbsp;</div></div> 
+                        <div class="frontcell"> 
+                           <div> 
+                              <h1>The Union at RPI</h1> 
+                              <p>Both a building and a broad organization of over 175 recognized student organizations, the Rensselaer Union is vibrant and unique.</p> 
+                              <p class="alignright"><a href="#">Read More</a></p> 
+                           </div> 
+                        </div> 
+                        <div class="fc-bot"><div>&nbsp;</div></div> 
+                     </div> 
+                     <div class="fc-padding"> 
+                        <div class="fc-top"><div>&nbsp;</div></div> 
+                        <div class="frontcell"> 
+                           <div> 
+                              <h1 class="fp-cal">Building Hours</h1> 
+                                                            	<p><b>Monday - Thursday:</b>&nbsp;&nbsp;&nbsp;Open 24 Hours</p> 
+                                                            	<p><b>Friday:</b>&nbsp;&nbsp;&nbsp;Closes at 1 am</p> 
+                                                            	<p><b>Saturday - Sunday:</b>&nbsp;&nbsp;&nbsp;Opens at 8 am</p> 
+                                                         </div> 
+                        </div> 
+                        <div class="fc-bot"><div>&nbsp;</div></div> 
+                     </div> 
+                  </div> 
+               </div> 
+               <div style="clear:both;"></div> 
+            </div> 
+         </div> 
+      </div> 
+   </div> 
+ 
+   <div id="stripe3"> 
+      <div id="str3"> 
+         <div class="innerdiv"> 
+            <div id="fpth-left"> 
+						</div> 
+            <div id="fpth-right"> 
+               <h2 class="datetime"><%= image_tag("clock_icon.gif", :alt => "") %>&nbsp;&nbsp;&nbsp;&nbsp;<b>12:15 am in Troy</b>&nbsp;&nbsp;&nbsp;&nbsp;Saturday, May 15</h2> 
+            </div> 
+            <div style="clear:both;"></div> 
+         </div> 
+      </div> 
+   </div> 
+ 
+   <div id="stripe4"> 
+      <div id="str4"> 
+         <div class="innerdiv"> 
+            <div id="maincontent"> 
+               <%= yield %>
+            </div> 
+         </div> 
+      </div> 
+      <div id="footer-shadow">&nbsp;</div> 
+   </div> 
+	<div id="overlay" class="overlay"><div id ="wrap" class="wrap"></div></div> 
+	<div class="innerdiv"> 
+		<div id="footer"> 
+			<div id="footer_padding"> 
+				<div class="footer-cell"> 
+					<h3><a href="http://home.union.rpi.edu/landings/view/1">Clubs</a></h3> 
+					<ul> 
+						<li><a href="http://home.union.rpi.edu/users/login">Club Management System</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/4">Advertising &amp; Promotions</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/12">Starting a Club</a></li> 
+						<li><a href="http://studentsenate.rpi.edu">Student Senate</a></li> 
+					</ul> 
+					<br /> 
+					<h3><a href="http://home.union.rpi.edu/landings/view/2">Finances</a></h3> 
+					<ul> 
+						<li><a href="http://home.union.rpi.edu/pages/view/3">Union Annual Report 2009</a></li> 
+						<li><a href="http://documents.studentsenate.rpi.edu/documents/current/124">Budget Policies</a></li> 
+						<li><a href="https://clubs.union.rpi.edu/docs/FeeWaiver.pdf">Activity Fee Waiver</a></li> 
+					</ul> 
+	
+				</div> 
+				<div class="footer-cell"> 
+					<h3><a href="http://home.union.rpi.edu/landings/view/3">About the Union</a></h3> 
+					<ul> 
+						<li><a href="http://home.union.rpi.edu/pages/view/5">Union Overview</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/38">Union FAQ</a></li> 
+						<li><a href="http://bookstore.rpi.edu">Union Bookstore</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/15">Room Reservations</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/8">Clubhouse Pub</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/9">Legal Services</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/13">Bank</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/11">Father's Marketplace</a></li> 
+						<li><a href="http://home.union.rpi.edu/pages/view/14">Hair Salon</a></li> 
+					</ul> 
+				</div> 
+				<div class="footer-cell"> 
+					<h3><a href="http://home.union.rpi.edu/landings/view/4">Campus and Beyond</a></h3> 
+					<ul> 
+						<li><a href="http://www.rpi.edu">RPI Home</a></li> 
+						<li><a href="http://rpinfo.rpi.edu">RPInfo</a></li> 
+						<li><a href="http://concerto.rpi.edu">Concerto</a></li> 
+						<li><a href="http://offcampus.union.rpi.edu">Off-Campus Housing</a></li> 
+						<li><a href="http://uec.union.rpi.edu">Events Calendar</a></li> 
+						<li><a href="http://rpiathletics.com">Athletics</a></li> 
+						<li><a href="http://www.muellercenter.rpi.edu/">Mueller Center</a></li> 
+						<li><a href="http://myrpi.org/hosting">myRPI Hosting</a></li> 
+						<li><a href="http://shuttles.rpi.edu">Shuttle Tracking</a></li> 
+						<li><a href="http://archer.union.rpi.edu">Archer Center</a></li> 
+						<li><a href="http://troyny.gov">City of Troy</a></li> 
+					</ul> 
+				</div> 
+				<div class="footer-cell" style="width:28%;"> 
+					<h3>Any Questions or Comments?</h3> 
+					<p>Have feedback for the Union or a specific group within the Union?  Select the type of feedback you'd like to leave by clicking on one of these icons:</p> 
+					
+					<ul id="feedback-links"> 
+						<li> 
+							<a href="/comments/add/1" name="/comments/add_jquery/1" class="tip-trigger" rel="#overlay"><%= image_tag("fb-union-inactive.png", :alt => "Got a general question or comment regarding the Union or its services?") %></a>							<!-- tooltip element --> 
+							<div class="tooltip"><p>Got a general question or comment regarding the Union or its services?</p></div> 
+						</li> 
+					
+						<li> 
+							<a href="/comments/add/2" name="/comments/add_jquery/2" class="tip-trigger" rel="#overlay"><%= image_tag("fb-money-inactive.png", :alt => "Ask the Executive Board questions about the budget, Union Annual Report, or Union funding.") %></a>							<!-- tooltip element --> 
+							<div class="tooltip"><p>Ask the Executive Board questions about the budget, Union Annual Report, or Union funding.</p></div> 
+						</li> 
+					
+						<li>				
+							<a href="/comments/add/3" name="/comments/add_jquery/3" class="tip-trigger" rel="#overlay"><%= image_tag("fb-clubs-inactive.png", :alt => "Submit questions or comments about student clubs and organizations within the Union.") %></a>							<!-- tooltip element --> 
+							<div class="tooltip"><p>Submit questions or comments about student clubs and organizations within the Union.</p></div> 
+						</li> 
+					
+						<li>	
+							<a href="/comments/add/4" name="/comments/add_jquery/4" class="tip-trigger" rel="#overlay"><%= image_tag("fb-www-inactive.png", :alt => "Send feedback about this website to the Web Technologies Group (WTG).") %></a>							<!-- tooltip element --> 
+							<div class="tooltip"><p>Send feedback about this website to the Web Technologies Group (WTG).</p></div> 
+						</li> 
+					</ul> 
+					<br clear="all" /> 
+					<br /> 
+					<h3>Republishing Content</h3> 
+					<p>For information about republishing material found within this website, or within the realm of the Union Web Services in general, please send an e-mail to <a href="mailto:sysadmin@union.rpi.edu">sysadmin@union.rpi.edu</a>. Photo credits are given where appropriate.</p> 
+				</div> 
+				<div style="clear:both;"></div> 
+			</div> 
+			<div id="subfooter"> 
+				<a href="/"><%= image_tag("unionlogo-footer.png", :alt => "Rensselaer Union") %></a>
+				<br /> 
+				<p><b>Copyright &copy; 2010 Rensselaer Union.</b><br /><br />Site designed and built by the <a href="http://webtech.union.rpi.edu">WTG</a>.<br />Front page notices delivered by <a href="http://concerto.rpi.edu">Concerto</a>.<br />All rights reserved.</p> 
+			</div> 
+		</div> 
+	</div> 
+</body> 
+</html> 

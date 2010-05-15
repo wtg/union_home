@@ -1,0 +1,27 @@
+/* the overlayed element */
+div.overlay{/* growing background image */background-image:url(../img/overlay/white.png);/* dimensions after the growing animation finishes  */width:780px;/* 880px */height:480px;/* 520px */top:50px; /* initially overlay is hidden */display:none;/* some padding to layout nested elements nicely  */padding:20px 30px;}
+/* default close button positioned on upper right corner */
+div.overlay div.close{background-image:url(../img/overlay/close.png);position:absolute;right:5px;top:5px;cursor:pointer;height:35px;width:35px;}
+/* use a semi-transparent image for the overlay */
+#overlay{background:url(../img/overlay/comments_new_dark.png) top center no-repeat;color:#efefef!important;}
+/* container for external content. uses vertical scrollbar, if needed */
+div.wrap{overflow-y:auto;}
+#comment_type{height:160px;padding:10px;background:#111;border:solid 1px #333;margin-top:0;}
+#comment_type select{width:95%!important;}
+#comment_type p.purpose{font-size:.65em!important;margin-top:8px;margin-bottom:0;}
+div.wrap form fieldset{height:395px;}
+div.wrap form div{clear:none!important;}
+div.wrap form div input,div.wrap form div textarea{width:95%;}
+div.wrap form div input{border:solid 2px #ccc;}
+div.wrap form div input:focus,div.wrap form div textarea:focus{background:#ff9!important;border:solid 2px #be0000;}
+div.wrap form div textarea{border:solid 2px #ccc;height:130px!important;}
+div.wrap form div.submit{padding:2px 25px;text-align:right;}
+div.wrap form div.submit input{border:none;background:#ba0000;width:125px;}
+div.wrap form label{font-size:.8em;text-align:left!important;background-color:transparent!important;color:#fff!important;}
+div.overlay form fieldset legend{padding-top:8px;text-transform:uppercase;letter-spacing:.2em;font-size:.8em;color:#FFF;}
+/* tooltip styling. uses a background image (a black box with an arrow) */ 
+div.tooltip, div.tooltip-left { background:transparent url(../img/black_arrowdef.png) top left no-repeat; height:62px; padding:30px; width:149px; font-size:14px; display:none; }
+div.tooltip-left { background:transparent url(../img/black_arrow_left.png) center right no-repeat; width:73px; height:105px; padding:30px; }
+div.tooltip p, div.tooltip-left p { color:#FFF !important; }
+ul#feedback-links { margin:6px 0px; padding:0px 14px; list-style: none; }
+ul#feedback-links li { float:left; margin:0px 8px !important; }
