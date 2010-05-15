@@ -1,0 +1,24 @@
+<h1>Listing landing_sidebars</h1>
+
+<table>
+  <tr>
+    <th>Landing</th>
+    <th>Sidebar</th>
+    <th>Cardinality</th>
+  </tr>
+
+<% @landing_sidebars.each do |landing_sidebar| %>
+  <tr>
+    <td><%=h landing_sidebar.landing_id %></td>
+    <td><%=h landing_sidebar.sidebar_id %></td>
+    <td><%=h landing_sidebar.cardinality %></td>
+    <td><%= link_to 'Show', landing_sidebar %></td>
+    <td><%= link_to 'Edit', edit_landing_sidebar_path(landing_sidebar) %></td>
+    <td><%= link_to 'Destroy', landing_sidebar, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New landing_sidebar', new_landing_sidebar_path %>

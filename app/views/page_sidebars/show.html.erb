@@ -1,0 +1,18 @@
+<p>
+  <b>Page:</b>
+  <%=h @page_sidebar.page_id %>
+</p>
+
+<p>
+  <b>Sidebar:</b>
+  <%=h @page_sidebar.sidebar_id %>
+</p>
+
+<p>
+  <b>Cardinality:</b>
+  <%=h @page_sidebar.cardinality %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_sidebar_path(@page_sidebar) %> |
+<%= link_to 'Back', page_sidebars_path %>

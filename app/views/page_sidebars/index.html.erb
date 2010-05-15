@@ -1,0 +1,24 @@
+<h1>Listing page_sidebars</h1>
+
+<table>
+  <tr>
+    <th>Page</th>
+    <th>Sidebar</th>
+    <th>Cardinality</th>
+  </tr>
+
+<% @page_sidebars.each do |page_sidebar| %>
+  <tr>
+    <td><%=h page_sidebar.page_id %></td>
+    <td><%=h page_sidebar.sidebar_id %></td>
+    <td><%=h page_sidebar.cardinality %></td>
+    <td><%= link_to 'Show', page_sidebar %></td>
+    <td><%= link_to 'Edit', edit_page_sidebar_path(page_sidebar) %></td>
+    <td><%= link_to 'Destroy', page_sidebar, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New page_sidebar', new_page_sidebar_path %>

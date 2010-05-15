@@ -1,0 +1,18 @@
+<p>
+  <b>Landing:</b>
+  <%=h @landing_sidebar.landing_id %>
+</p>
+
+<p>
+  <b>Sidebar:</b>
+  <%=h @landing_sidebar.sidebar_id %>
+</p>
+
+<p>
+  <b>Cardinality:</b>
+  <%=h @landing_sidebar.cardinality %>
+</p>
+
+
+<%= link_to 'Edit', edit_landing_sidebar_path(@landing_sidebar) %> |
+<%= link_to 'Back', landing_sidebars_path %>

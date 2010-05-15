@@ -1,0 +1,2 @@
+module PageSidebarsHelper
+end

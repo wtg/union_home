@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @category.title %>
+</p>
+
+<p>
+  <b>Is hidden:</b>
+  <%=h @category.is_hidden %>
+</p>
+
+<p>
+  <b>Cardinality:</b>
+  <%=h @category.cardinality %>
+</p>
+
+<p>
+  <b>Landing:</b>
+  <%=h @category.landing_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

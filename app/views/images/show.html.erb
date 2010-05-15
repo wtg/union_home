@@ -1,0 +1,43 @@
+<p>
+  <b>Title:</b>
+  <%=h @image.title %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%=h @image.caption %>
+</p>
+
+<p>
+  <b>Imageable:</b>
+  <%=h @image.imageable_id %>
+</p>
+
+<p>
+  <b>Imageable type:</b>
+  <%=h @image.imageable_type %>
+</p>
+
+<p>
+  <b>File file name:</b>
+  <%=h @image.file_file_name %>
+</p>
+
+<p>
+  <b>File content type:</b>
+  <%=h @image.file_content_type %>
+</p>
+
+<p>
+  <b>File file size:</b>
+  <%=h @image.file_file_size %>
+</p>
+
+<p>
+  <b>File updated at:</b>
+  <%=h @image.file_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

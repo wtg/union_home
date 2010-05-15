@@ -1,0 +1,24 @@
+<h1>Editing page_sidebar</h1>
+
+<% form_for(@page_sidebar) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :page_id %><br />
+    <%= f.text_field :page_id %>
+  </p>
+  <p>
+    <%= f.label :sidebar_id %><br />
+    <%= f.text_field :sidebar_id %>
+  </p>
+  <p>
+    <%= f.label :cardinality %><br />
+    <%= f.text_field :cardinality %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @page_sidebar %> |
+<%= link_to 'Back', page_sidebars_path %>

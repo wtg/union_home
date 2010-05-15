@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  landing_id: 1
+  sidebar_id: 1
+  cardinality: 1
+
+two:
+  landing_id: 1
+  sidebar_id: 1
+  cardinality: 1

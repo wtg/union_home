@@ -1,0 +1,24 @@
+<h1>Editing landing_sidebar</h1>
+
+<% form_for(@landing_sidebar) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :landing_id %><br />
+    <%= f.text_field :landing_id %>
+  </p>
+  <p>
+    <%= f.label :sidebar_id %><br />
+    <%= f.text_field :sidebar_id %>
+  </p>
+  <p>
+    <%= f.label :cardinality %><br />
+    <%= f.text_field :cardinality %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @landing_sidebar %> |
+<%= link_to 'Back', landing_sidebars_path %>

@@ -1,0 +1,44 @@
+<h1>Editing image</h1>
+
+<% form_for(@image) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :caption %><br />
+    <%= f.text_field :caption %>
+  </p>
+  <p>
+    <%= f.label :imageable_id %><br />
+    <%= f.text_field :imageable_id %>
+  </p>
+  <p>
+    <%= f.label :imageable_type %><br />
+    <%= f.text_field :imageable_type %>
+  </p>
+  <p>
+    <%= f.label :file_file_name %><br />
+    <%= f.text_field :file_file_name %>
+  </p>
+  <p>
+    <%= f.label :file_content_type %><br />
+    <%= f.text_field :file_content_type %>
+  </p>
+  <p>
+    <%= f.label :file_file_size %><br />
+    <%= f.text_field :file_file_size %>
+  </p>
+  <p>
+    <%= f.label :file_updated_at %><br />
+    <%= f.datetime_select :file_updated_at %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @image %> |
+<%= link_to 'Back', images_path %>

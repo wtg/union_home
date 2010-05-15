@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @landing.title %>
+</p>
+
+<p>
+  <b>Opening:</b>
+  <%=h @landing.opening %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%=h @landing.tags %>
+</p>
+
+
+<%= link_to 'Edit', edit_landing_path(@landing) %> |
+<%= link_to 'Back', landings_path %>

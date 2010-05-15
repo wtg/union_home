@@ -1,0 +1,24 @@
+<h1>Listing landings</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Opening</th>
+    <th>Tags</th>
+  </tr>
+
+<% @landings.each do |landing| %>
+  <tr>
+    <td><%=h landing.title %></td>
+    <td><%=h landing.opening %></td>
+    <td><%=h landing.tags %></td>
+    <td><%= link_to 'Show', landing %></td>
+    <td><%= link_to 'Edit', edit_landing_path(landing) %></td>
+    <td><%= link_to 'Destroy', landing, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New landing', new_landing_path %>
