@@ -1,0 +1,26 @@
+<h1>Listing category_pages</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Page</th>
+    <th>Cardinality</th>
+    <th>Is pinned</th>
+  </tr>
+
+<% @category_pages.each do |category_page| %>
+  <tr>
+    <td><%=h category_page.category_id %></td>
+    <td><%=h category_page.page_id %></td>
+    <td><%=h category_page.cardinality %></td>
+    <td><%=h category_page.is_pinned %></td>
+    <td><%= link_to 'Show', category_page %></td>
+    <td><%= link_to 'Edit', edit_category_page_path(category_page) %></td>
+    <td><%= link_to 'Destroy', category_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New category_page', new_category_page_path %>

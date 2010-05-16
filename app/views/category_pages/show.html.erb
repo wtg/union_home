@@ -1,0 +1,23 @@
+<p>
+  <b>Category:</b>
+  <%=h @category_page.category_id %>
+</p>
+
+<p>
+  <b>Page:</b>
+  <%=h @category_page.page_id %>
+</p>
+
+<p>
+  <b>Cardinality:</b>
+  <%=h @category_page.cardinality %>
+</p>
+
+<p>
+  <b>Is pinned:</b>
+  <%=h @category_page.is_pinned %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_page_path(@category_page) %> |
+<%= link_to 'Back', category_pages_path %>

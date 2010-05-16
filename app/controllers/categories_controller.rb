@@ -25,6 +25,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
+    @landings = Landing.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
+    @landings = Landing.all
   end
 
   # POST /categories

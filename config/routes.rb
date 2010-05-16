@@ -1,23 +1,30 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :category_pages
+
   map.resources :programs
 
   map.resources :budgets
-
-  map.resources :page_sidebars
-
-  map.resources :landing_sidebars
 
   map.resources :sidebars
 
   map.resources :clubs
 
-  map.resources :pages
+  map.resources :pages do |pages|
+    pages.resources :images
+    pages.resources :page_sidebars
+  end
 
   map.resources :images
 
-  map.resources :landings
+  map.resources :landings do |landings|
+    landings.resources :categories
+    landings.resources :images
+    landings.resources :landing_sidebars
+  end
 
-  map.resources :categories
+  map.resources :categories do |categories|
+    categories.resources :pages
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 

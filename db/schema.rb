@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100515173025) do
+ActiveRecord::Schema.define(:version => 20100516181827) do
 
   create_table "budgets", :force => true do |t|
     t.integer  "ext_id"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(:version => 20100515173025) do
     t.boolean  "is_hidden"
     t.integer  "cardinality"
     t.integer  "landing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "category_pages", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "page_id"
+    t.integer  "cardinality"
+    t.boolean  "is_pinned"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -82,7 +91,6 @@ ActiveRecord::Schema.define(:version => 20100515173025) do
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "content"
-    t.integer  "category_id"
     t.text     "description"
     t.string   "tags"
     t.datetime "created_at"

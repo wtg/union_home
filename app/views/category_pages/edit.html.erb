@@ -1,0 +1,28 @@
+<h1>Editing category_page</h1>
+
+<% form_for(@category_page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.label :page_id %><br />
+    <%= f.text_field :page_id %>
+  </p>
+  <p>
+    <%= f.label :cardinality %><br />
+    <%= f.text_field :cardinality %>
+  </p>
+  <p>
+    <%= f.label :is_pinned %><br />
+    <%= f.check_box :is_pinned %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @category_page %> |
+<%= link_to 'Back', category_pages_path %>

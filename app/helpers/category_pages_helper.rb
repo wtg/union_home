@@ -1,0 +1,2 @@
+module CategoryPagesHelper
+end
