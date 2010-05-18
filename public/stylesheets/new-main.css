@@ -86,11 +86,13 @@ ul#topmenu li a { font-family:Helvetica, Arial, sans-serif !important; color:#FF
 ul#topmenu li a:hover { background:url(../images/new/menu_hov.gif) left bottom repeat-x; }
 
 /* Login */
-#loginpanel { color:#ccc; font-size:0.7em; padding-top:30px; }
-#loginpanel p { margin-bottom:3px; }
-#loginpanel a { font-size:1.3em; color:#FFF; }
+#loginpanel { color:#ccc; font-size:0.7em; padding-top:20px; }
+#loginpanel p { margin-bottom:10px; }
+#loginpanel a { font-size:1em; color:#FFF; }
 #loginpanel a:hover { color:#FFF; text-decoration: underline; }
-#loginpanel.login-only { padding-top:45px !important; }
+
+/* Search */
+.searchbox input { font-size:0.8em; background:#999; color:#333; border:none; padding:4px; width:260px; -moz-box-shadow: 0 0.2em 0em #000; -webkit-box-shadow: 0 0 0.6em #000; }
 
 /* Front Page */
 #fp-expose { zoom:1; margin:0px !important; line-height:normal !important; padding:0px; min-height:200px; text-align:center; }

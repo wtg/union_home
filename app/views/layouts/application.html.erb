@@ -36,9 +36,15 @@
                   <div style="clear:both;"></div> 
                </div> 
                <div style="float:right; text-align:right;"> 
-           			<div id="loginpanel" class="login-only"> 
-               			<a href="/users/login">Login</a>
+           			<div id="loginpanel"> 
+               			<p><%= link_to "Log in" %> to manage clubs</p>
              		</div> 
+					<div class="searchbox" id="search-jQuery">
+						<!-- if there is Javascript enabled -->
+						<input id="search_query" class="index-search" name="query" size="30" value="search pages and clubs" type="text" autocomplete="off" onfocus="clearDefault(this)" />
+						<div class="auto_complete" id="search_query_auto_complete"></div>
+						<%= link_to "", "#", :id => "search_ex", :style => "display:none;" %>
+					</div>
                </div> 
                <div style="clear:both;"></div> 
             </div> 
