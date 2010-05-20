@@ -1,28 +1,16 @@
-<p>
-  <b>Title:</b>
-  <%=h @page.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%=h @page.content %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%=h @page.category_id %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%=h @page.description %>
-</p>
-
-<p>
-  <b>Tags:</b>
-  <%=h @page.tags %>
-</p>
-
-
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<div id="mc-left"<% if @page.sidebars.empty? %> style="width:100%;"<% end %>>
+	<div id="page-content"><%= @page.content %></div>
+</div>
+<% if !@page.sidebars.empty? %>	
+<div id="mc-right">
+	<% @page.sidebars.each do |sb| %>
+	<div class="sb-block">
+		<h1><%= sb.title %></h1>
+		<!-- if ADMIN -->
+		<p><%= link_to 'Edit', edit_sidebar_path(sb) %>&nbsp;&nbsp;<%= link_to 'Delete', sidebar_path(sb), :method => :delete, :confirm => "Are you sure you wish to delete this sidebar permanently?" %></p>
+		<!-- end ADMIN -->
+	</div>
+	<% end %>
+</div>
+<% end %>
+<div style="clear:both;"></div>
