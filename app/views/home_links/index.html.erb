@@ -1,0 +1,24 @@
+<h1>Listing home_links</h1>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Url</th>
+    <th>Cardinality</th>
+  </tr>
+
+<% @home_links.each do |home_link| %>
+  <tr>
+    <td><%=h home_link.label %></td>
+    <td><%=h home_link.url %></td>
+    <td><%=h home_link.cardinality %></td>
+    <td><%= link_to 'Show', home_link %></td>
+    <td><%= link_to 'Edit', edit_home_link_path(home_link) %></td>
+    <td><%= link_to 'Destroy', home_link, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New home_link', new_home_link_path %>

@@ -5,7 +5,7 @@
 			<li><%= f.label :title %> <%= f.text_field :title %></li>
 			<li><%= f.label :is_hidden %> <%= f.check_box :is_hidden %></li>
 			<li><%= f.label :cardinality %> <%= f.text_field :cardinality %></li>
-			<li><%= f.label :landing_id %> <%= collection_select(:category, :landing_id, @landings, "id", "name") %>
+			<li><%= f.label :landing_id %> <%= collection_select(:category, :landing_id, @landings, "id", "title") %>
 		</ol>
 	</fieldset>
   <%= f.submit button_text %>

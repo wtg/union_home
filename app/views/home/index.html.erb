@@ -1,1 +1,40 @@
-<h1>Welcome the Rensselaer Union!</h1>
+<div id="mc-left">
+	<h1>Welcome to the Rensselaer Union!</h1>
+</div>
+<div id="mc-right">
+	<h1>Common Links</h1>
+	<br /><br />
+	<h1>Troy Weather</h1> 
+	<table class="weathercell" cellpadding="0" cellspacing="1" border="0" width="100%"> 
+		<tr valign='top'> 
+			<td> 
+
+				<h2>Now</h2> 
+				<span class="weatherimg"><%= image_tag("weather_icons/11.gif", :alt => "Light Rain") %></span> 
+				<p class="warmtemp wt-black">52&deg;</p> 
+				<p class ="windchill">(52&deg; chill)</p> 
+			</td> 
+
+			<td> 
+				<h2>Today</h2> 
+				
+				<span class="weatherimg"><%= image_tag("weather_icons/11.gif", :alt => "Showers") %></span> 
+				<p class="warmtemp">66&deg;</p> 
+				<p class="coldtemp">51&deg;</p> 
+			</td> 
+
+			<td> 
+				<h2>Wed</h2> 
+				
+				<span class="weatherimg"><%= image_tag("weather_icons/11.gif", :alt => "Showers") %></span> 
+				<p class="warmtemp">57&deg;</p> 
+				<p class="coldtemp">49&deg;</p> 
+			</td> 
+
+		</tr> 
+	</table> 
+	<p class="littlelink"><a href="http://weather.yahoo.com/forecast/USNY1458_f.html">Full Forecast</a></p> 
+	<br /><br />
+</div>
+<div style="clear:both;"></div>
+

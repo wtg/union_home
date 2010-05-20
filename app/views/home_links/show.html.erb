@@ -1,0 +1,18 @@
+<p>
+  <b>Label:</b>
+  <%=h @home_link.label %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @home_link.url %>
+</p>
+
+<p>
+  <b>Cardinality:</b>
+  <%=h @home_link.cardinality %>
+</p>
+
+
+<%= link_to 'Edit', edit_home_link_path(@home_link) %> |
+<%= link_to 'Back', home_links_path %>

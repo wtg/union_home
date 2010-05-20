@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :alerts
+
+  map.resources :home_links
+
   map.resources :category_pages
 
   map.resources :programs

@@ -1,18 +1,54 @@
-<p>
-  <b>Title:</b>
-  <%=h @landing.title %>
-</p>
+<% content_for :head do %>
+	<%= javascript_include_tag "landingexpansion.js" %>
+<% end %>
 
-<p>
-  <b>Opening:</b>
-  <%=h @landing.opening %>
-</p>
-
-<p>
-  <b>Tags:</b>
-  <%=h @landing.tags %>
-</p>
-
-
-<%= link_to 'Edit', edit_landing_path(@landing) %> |
-<%= link_to 'Back', landings_path %>
+<div id="ltop">
+	<!-- if ADMIN -->
+	<div class="ab-rounded_box">
+		<div class="ab-rounded_top"><div></div></div>
+		<div class="ab-rounded_content">
+			<ul id="actionblock">
+				<li><%= link_to "New Sidebar Blurb", new_landing_landing_sidebar_path(@landing) %></li>
+				<li><%= link_to "Edit Landing", edit_landing_path(@landing) %></li>
+				<li><%= link_to "All Landings", landings_path %></li>
+				<li><%= link_to "List Categories", categories_path %></li>
+				<li><%= link_to "New Category", new_landing_category_path(@landing) %></li>
+			</ul>
+			<div style="clear:both;"></div>
+		</div>
+		<div class="ab-rounded_bottom"><div></div></div>
+	</div>
+	<!-- end ADMIN -->
+	<%= @landing.opening %>
+</div>
+<div id="mc-left">
+	<p class="showhide"><a href="#" id="show-all">Show All</a> <a href="#" id="hide-all">Hide All</a></p>
+	<% @landing.categories.each do |cat| %>
+		<% if !cat.is_hidden %>
+			<h2 class="cat-head trigger"><a href="#"><span id="h2arrow" class="h2min">&nbsp;&nbsp;</span>&nbsp;<%= cat.title %></a></h2>
+			<div class="toggle_container">
+				<div class="block landingblock">
+					<!-- if ADMIN -->
+					<p>(<%= link_to "View", category_path(cat) %> | <%= link_to 'Edit', edit_category_path(cat) %> | <%= link_to 'Delete', category_path(cat), :method => :delete, :confirm => "Are you sure you wish to remove this category?" %> | <%= link_to "New Internal Page", new_category_page_path(cat) %>)</p>
+					<!-- end ADMIN -->
+					<% cat.pages.each do |page| %>
+						<h3><%= link_to page.title, page_path(page) %><!-- if ADMIN --><small> (<%= link_to 'Edit', edit_page_path(page) %> | <%= link_to 'Delete Page', page_path(page), :method => :delete, :confirm => "Are you sure you wish to remove this page from the site?" %></small><!-- end ADMIN --></h3>
+						<p><%= page.description %></p>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+<div id="mc-right">
+	<% @landing.sidebars.each do |sb| %>
+		<div class="sb-block">
+			<h1><%= sb.title %></h1>
+			<!-- if ADMIN -->
+			<p><%= link_to 'Edit', edit_sidebar_path(sb) %>&nbsp;&nbsp;<%= link_to "Delete", sidebar_path(sb), :method => :delete, :confirm => "Are you sure you wish to delete this sidebar from the site?" %></p>
+			<!-- end ADMIN -->
+			<p><%= sb.content %></p>
+		</div>
+	<% end %>
+</div>
+<div style="clear:both;">

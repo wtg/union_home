@@ -17,7 +17,9 @@
 		</style> 
 	<![endif]--> 
  
-	<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script> 
+	<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script>
+	
+	<%= yield[:head] %> 
 
 </head> 
 <body> 
@@ -28,7 +30,7 @@
                <div style="float:left; width:123px; margin-top:15px;"><a href="/"><%= image_tag("new/unionlogo.png", :alt => "Rensselaer Union" ) %></a></div> 
                <div style="float:left;"> 
                   <ul id="topmenu"> 
-                     <li><a href="#">Clubs</a></li> 
+                     <li><%= link_to "Clubs", landing_path(1) %></li> 
                      <li><a href="#">Finances</a></li> 
                      <li><a href="#">About the Union</a></li> 
                      <li><a href="#">Campus and Beyond</a></li> 
