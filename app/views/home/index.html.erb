@@ -2,11 +2,12 @@
 	<h1>Welcome to the Rensselaer Union!</h1>
 </div>
 <div id="mc-right">
+	<%= link_to "Add Link", new_home_link_path %>
 	<% if @homelinks.size > 0 %>
 	<h1>Common Links</h1>
 	<ul class="buttonsm">
 		<% @homelinks.each do |hl| %>
-		<li><% link_to hl do %><span><%= hl.label %></span><% end %></li>
+		<li><% link_to hl.url do %><span><%= hl.label %></span><% end %></li>
 		<% end %>
 	</ul>
 	<br /><br />
