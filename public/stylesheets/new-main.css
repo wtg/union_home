@@ -239,3 +239,10 @@ form.cmxform em{font-weight:700;font-style:normal;color:red;}
 form.cmxform label{background:#ccc;color:#333;font-size:.9em;text-align:right;padding-right:15px;width:120px;}
 /* Width of labels */form.cmxform fieldset fieldset label{margin-left:123px;}
 /* Width plus 3 (html space) *//*\*//*/ form.cmxform legend { display: inline-block; } /* IE Mac legend fix */
+
+
+/* front page new */
+ul.buttonsm { padding:0px !important; margin:0px !important; }
+ul.buttonsm li { list-style-type:none; padding:0px; margin:0px; }
+ul.buttonsm li a { color:#000; text-shadow:0px -1px 0px #FFF; background:url(../images/buttonsm.png) center left no-repeat; display:block; padding:0px 12px; }
+ul.buttonsm li a span { background:url(../images/buttonsm.png) center right no-repeat; width:100%; display:block; padding:8px 12px; padding-left:0px; }
