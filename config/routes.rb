@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :alerts
 
+  map.concertofeed "home/concerto.:format" , :controller => "home" , :action => "concerto"
+
   map.resources :home_links
 
   map.resources :category_pages
