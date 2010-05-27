@@ -1,4 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+  map.view_landing 'landings/:slug', :controller => 'landings', :action => 'show'
+  map.view_page 'pages/:slug', :controller => 'pages', :action => 'show'
+      
   map.resources :alerts
 
   map.concertofeed "home/concerto.:format" , :controller => "home" , :action => "concerto"
@@ -33,7 +36,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
-
+      
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action

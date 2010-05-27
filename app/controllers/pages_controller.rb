@@ -13,7 +13,11 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.xml
   def show
-    @page = Page.find(params[:id])
+    if (params[:slug])
+      @page = Page.find_by_slug(params[:slug])
+    else
+      @page = Page.find(params[:id])
+    end
 
     respond_to do |format|
       format.html # show.html.erb

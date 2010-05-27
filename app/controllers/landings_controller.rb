@@ -1,4 +1,5 @@
 class LandingsController < ApplicationController
+  
   # GET /landings
   # GET /landings.xml
   def index
@@ -13,7 +14,11 @@ class LandingsController < ApplicationController
   # GET /landings/1
   # GET /landings/1.xml
   def show
-    @landing = Landing.find(params[:id])
+    if (params[:slug])
+      @landing = Landing.find_by_slug(params[:slug])
+    else
+      @landing = Landing.find(params[:id])
+    end
 
     respond_to do |format|
       format.html # show.html.erb

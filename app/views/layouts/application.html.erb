@@ -32,7 +32,7 @@
                <div style="float:left; width:123px; margin-top:15px;"><a href="/"><%= image_tag("new/unionlogo.png", :alt => "Rensselaer Union" ) %></a></div> 
                <div style="float:left;"> 
                   <ul id="topmenu"> 
-                     <li><%= link_to "Clubs", landing_path(1) %></li> 
+                     <li><%= link_to "Clubs", view_landing_path(:slug => "clubs") %></li> 
                      <li><a href="#">Finances</a></li> 
                      <li><a href="#">About the Union</a></li> 
                      <li><a href="#">Campus and Beyond</a></li> 

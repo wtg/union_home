@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   require 'open-uri'
   require 'json'
   def index
+    @homelinks = HomeLink.find(:all, :order => "cardinality ASC")
   end
 
   def concerto
