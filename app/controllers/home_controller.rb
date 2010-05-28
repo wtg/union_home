@@ -17,7 +17,7 @@ class HomeController < ApplicationController
     end
     @finaljson = @finaljson.sort_by { rand }
     if @finaljson.size > count
-        @finaljson = @finaljson[0..count]
+        @finaljson = @finaljson[0..count-1]
     end
     respond_to do |format|
       format.json  { render :json => @finaljson.to_json }
