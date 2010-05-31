@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     count = 8
     @finaljson = []
     for feed in feeds
-      url = 'http://signage.union.rpi.edu/content/render/?select_id='+feed.to_s+'&format=json&count='+count.to_s+'&orderby=rand&type=graphics&width=652&height=320'
+      url = 'http://concerto.rpi.edu/content/render/?select_id='+feed.to_s+'&format=json&count='+count.to_s+'&orderby=rand&type=graphics&width=652&height=320'
       buffer = open(url, "UserAgent" => "Ruby-Wget").read
       result = JSON.parse(buffer)
       @finaljson = @finaljson + result
