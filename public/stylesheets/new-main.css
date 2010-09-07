@@ -65,7 +65,7 @@ div.landingblock { }
 div.landingblock div { padding-left:18px; margin:0px !important;  margin-bottom:20px; border-left:solid 1px #ccc;}
 div.landingblock h2 { margin-left:-46px !important; }
 div.landingblock p { font-size:0.8em; margin:0 !important; padding:0px 0px 22px 0px !important; }
-h2.cat-head { font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,sans-serif !important; padding:0px 15px 0px 0px !important; background: url(../images/new/h2ch-bgright.png) top right no-repeat !important; cursor:hand !important; }
+h2.cat-head { text-shadow:0px -1px 0px #FFF; font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,sans-serif !important; padding:0px 15px 0px 0px !important; background: url(../images/new/h2ch-bgright.png) top right no-repeat !important; cursor:hand !important; }
 h2.trigger a { font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,sans-serif !important; background:url(../images/new/h2ch-bgleft.png) top left no-repeat !important; color:#000 !important; font-size:0.9em !important; padding:11px 0px 8px 18px; display:block; }
 .toggle_container {padding:0px 0px 20px 18px; border-left:solid 1px #999; overflow:hidden;width:500px;clear:both;margin:0px 0px 12px 24px;}
 .toggle_container .block { }
